@@ -1,0 +1,21 @@
+<p>listado de heroes</p>
+<!-- directiva ngIf -->
+<div *ngIf="heroeBorrado;else noBorrado">
+    <h3>heroe borrado <small>{{heroeBorrado}}</small></h3>
+</div>
+
+
+<!-- va a mostrar lo que dice basado en la condicion de noBorrado -->
+<!-- las #condiciones locales se van a mostrar en este caso si no se cumple 
+lo de la funcion else noBorrado-->
+<ng-template #noBorrado><h3>No ha borrado nada</h3></ng-template>
+
+
+  <button (click)="borrarHeroe()">
+    borrar
+  </button>
+<!-- directiva ngFor -->
+
+<ul *ngFor="let heroe of heroes; let i = index">
+    <li>{{i}}-{{heroe}}</li>
+</ul>
