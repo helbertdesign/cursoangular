@@ -1,0 +1,23 @@
+<h3>agregar  <small>{{nuevo.nombre}}</small></h3>
+      <br>
+
+      <form (ngSubmit)="agregar()" >
+         <input type="text"
+          placeholder="nombre"
+          name="nombre"
+          [(ngModel)]="nuevo.nombre"
+          />
+          <!-- [value]="nuevo.nombre"
+          (input)="cambiarnombre($event)" es lo mismo que usar ngmodule -->
+         <!-- se pone esas llaves porque estoy diciendo que teno una propiedad que se tiene  ue unir con lo
+            que me esta pidiendo el form -->
+         <input type="number"
+          placeholder="poder"
+          type="text"
+          placeholder="poder" 
+          name="poder"
+          [(ngModel)]="nuevo.poder"/>
+         <button type="submit">
+            agregar
+         </button>
+      </form>
